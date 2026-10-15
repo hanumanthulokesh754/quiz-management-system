@@ -1,0 +1,39 @@
+/* Online Quiz System - white background, blue accents */
+:root { --brand: #1d4ed8; --brand-dark: #1e3a8a; --brand-soft: #eff6ff; }
+
+body { background: #fff; color: #1f2937; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+
+.navbar-quiz { background: var(--brand); }
+.btn-primary { background: var(--brand); border-color: var(--brand); }
+.btn-primary:hover, .btn-primary:focus { background: var(--brand-dark); border-color: var(--brand-dark); }
+.btn-outline-primary { color: var(--brand); border-color: var(--brand); }
+.btn-outline-primary:hover { background: var(--brand); border-color: var(--brand); }
+a { color: var(--brand); }
+
+.hero { background: var(--brand-soft); border-radius: 1rem; padding: 4rem 1.5rem; }
+.hero h1 { color: var(--brand-dark); font-weight: 800; }
+
+.card { border: 1px solid #e5e7eb; border-radius: .75rem; }
+.card-hover { transition: transform .15s ease, box-shadow .15s ease; }
+.card-hover:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1.25rem rgba(29, 78, 216, .12); }
+
+.stat-card { border-left: 5px solid var(--brand); }
+.stat-number { font-size: 2rem; font-weight: 700; color: var(--brand-dark); }
+
+.badge-cat { background: var(--brand-soft); color: var(--brand-dark); font-weight: 600; }
+
+.auth-card { max-width: 440px; margin: 2rem auto; }
+
+/* quiz page */
+.option-label { display: block; border: 1px solid #d1d5db; border-radius: .5rem; padding: .6rem .9rem;
+                margin-bottom: .5rem; cursor: pointer; transition: background .1s ease; }
+.option-label:hover { background: var(--brand-soft); }
+.form-check-input:checked + .option-label { border-color: var(--brand); background: var(--brand-soft); }
+.timer-bar { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 2px solid var(--brand); }
+
+.score-circle { width: 140px; height: 140px; border-radius: 50%; border: 8px solid var(--brand);
+                display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
+                font-size: 2.25rem; font-weight: 800; color: var(--brand-dark); }
+
+footer { border-top: 1px solid #e5e7eb; color: #6b7280; font-size: .9rem; }
