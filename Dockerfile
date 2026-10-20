@@ -6,6 +6,7 @@ RUN mvn -q clean package -DskipTests
 
 FROM tomcat:10.1-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
+RUN sed -i s/8005/-1/ /usr/local/tomcat/conf/server.xml
 COPY --from=build /app/target/online-quiz.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
